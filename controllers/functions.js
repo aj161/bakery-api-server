@@ -158,7 +158,7 @@ console.log(req.body);
 const { name, price, imageUrl, type } = req.body;
 const id = req.params.id;
 // or const {id} = req.params;
-const updatedProduct = await productModel.findByIdAndUpdate(id, { name, price, imageUrl, type, quantity });
+const updatedProduct = await productModel.findByIdAndUpdate(id, { name, price, imageUrl, type });
 console.log(updatedProduct);
 let productsData = await productModel.find();
 res.send(productsData);
